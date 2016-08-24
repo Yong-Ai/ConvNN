@@ -7,6 +7,7 @@ test data - MNIST test data
 
 Library :: OpenCV 2.4.5 
 
+Tool : Windows 7, Visual studio 2013
 
 # Master Name : Seungyong Ko
 
