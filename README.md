@@ -8,7 +8,7 @@ test data - MNIST test data
 Library :: OpenCV 2.4.5 
 
 
-Seungyong Ko
+# Master Name : Seungyong Ko
 
 --------------------------------------------------------
 
