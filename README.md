@@ -10,7 +10,7 @@ Library :: OpenCV 2.4.5
 Tool : Windows 7, Visual studio 2013
 
 ![실험결과](./figure.PNG)
-
+![Structure](./figure2.PNG)
 
 # Master Name : Seungyong Ko
 
