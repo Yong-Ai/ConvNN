@@ -9,7 +9,7 @@ Library :: OpenCV 2.4.5
 
 Tool : Windows 7, Visual studio 2013
 
-![Structure](./figure2.PNG)
+![Structure](./figure2.png)
 
 ![실험결과](./figure.PNG)
 
