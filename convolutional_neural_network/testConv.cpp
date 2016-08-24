@@ -38,18 +38,15 @@ void LoadWeight(int number);
 IplImage *src;		//처음 이미지를 저장할 IplImage
 
 int main()
-{
-
-	
+{	
+	// Commit Test
 	FILE *fp_target,*fp;
 	int temp_target;
 	int count_for_filter_layer = 0;
 	int epoch = NUM_EPOCH;
 	double energy = 0;
-
 	double temp = -1;
-	int Label = -1;
-	
+	int Label = -1;	
 	//이미지 정의를 위한 데이터 불러오기
 	fp_target = fopen("testData\\target.txt", "r");
 	for(int i = 0; i < TARGET_SIZE; i++)
@@ -571,30 +568,32 @@ void Save_Weight(int epoch, double energy)
 	char Name[50];
 
 	sprintf(Name, "weight\\weight-%d-%lf.txt", epoch, energy);
-	
+
 	fp_save = fopen(Name, "w");
 
-	for(int i = 0; i < 6; i++)//0, 1
+	for (int i = 0; i < 6; i++)//0, 1
 	{
-		for(int j = 0; j < layers[i+1]; j++)//3, 2
+		for (int j = 0; j < layers[i + 1]; j++)//3, 2
 		{
-			for(int k = 0; k < layers[i]; k++)//1, 3
+			for (int k = 0; k < layers[i]; k++)//1, 3
 			{
-				fprintf(fp_save, "%lf ", arch[i+1][j].bias);
-				if(i == 6)
+				fprintf(fp_save, "%lf ", arch[i + 1][j].bias);
+				if (i == 6)
 				{
 					fprintf(fp_save, "%lf ", weights[i][j][k].beta);
-				}else if(i % 2 == 0)
+				}
+				else if (i % 2 == 0)
 				{
-					for(int l = 0; l < weights[i][j][k].height; l++)
+					for (int l = 0; l < weights[i][j][k].height; l++)
 					{
-						for(int m = 0; m < weights[i][j][k].width; m++)
+						for (int m = 0; m < weights[i][j][k].width; m++)
 						{
 							fprintf(fp_save, "%lf ", weights[i][j][k].filter[l][m]);
 						}
 						fprintf(fp_save, "\n");
 					}
-				}else if(i % 2 == 1)
+				}
+				else if (i % 2 == 1)
 				{
 					fprintf(fp_save, "%lf ", weights[i][j][k].beta);
 				}
@@ -606,12 +605,8 @@ void Save_Weight(int epoch, double energy)
 	fclose(fp_save);
 	/*sprintf(Name, "weight\\info-%d.txt", epoch);
 	fp_save = fopen(Name, "w");
-*/
-
-	
-
+	*/
 }
-
 void Save_Weight()
 {
 	FILE *fp_save;

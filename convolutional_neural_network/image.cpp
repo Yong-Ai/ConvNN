@@ -22,7 +22,6 @@ void Make_first(IplImage *src_image, Img *image)
 			image->data[i][j] /= 127.5;
 		}
 	}
-
 }
 void Test_showimage(Img image, int index)
 {
@@ -37,7 +36,6 @@ void Test_showimage(Img image, int index)
 			cvSetReal2D(view, i, j, image.data[i][j]*127.5+127.5);
 		}
 	}
-
 	cvShowImage("view", view);
 	char file_name[30];
 	sprintf(file_name, "%d.jpg", index);
