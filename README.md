@@ -1,4 +1,4 @@
-## ConvNN 
+# ConvNN 
 Convolutional Neural Network - LeNet
 train data - MNIST train data
 test data - MNIST test data
